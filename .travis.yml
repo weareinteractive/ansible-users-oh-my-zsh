@@ -7,9 +7,9 @@ before_install:
  - sudo apt-get install -qq python-apt python-pycurl
 install:
   - pip install ansible
-  - ansible-galaxy install franklin.git
-  - ansible-galaxy install franklin.users
 script:
   - echo localhost > inventory
+  - ansible-galaxy install franklinkim.git
+  - ansible-galaxy install franklinkim.users
   - ansible-playbook --syntax-check -i inventory test.yml
   - ansible-playbook -i inventory test.yml --connection=local --sudo -vvvv
