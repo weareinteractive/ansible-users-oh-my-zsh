@@ -47,7 +47,7 @@ users_oh_my_zsh_disable_auto_update: true
 # how often before auto-updates occur? (in days)
 users_oh_my_zsh_update_days: 13
 # if you want to disable colors in ls
-oh_my_zsh_disable_ls_colors: false
+users_oh_my_zsh_disable_ls_colors: false
 # if you want to disable autosetting terminal title.
 users_oh_my_zsh_disable_auto_title: false
 # if you want to disable command autocorrection
