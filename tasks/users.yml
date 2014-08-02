@@ -36,8 +36,8 @@
 - name: Configuring oh-my-zsh
   template: >
     src=home-user-zshrc.j2
-    dest=/home/{{ item.name }}/.zshrc
-    owner={{ item.name }}
+    dest=/home/{{ item.username }}/.zshrc
+    owner={{ item.username }}
     group={{ item.group if item.group is defined else (users_group if users_group != false else item.username) }}
     backup=yes
     mode=0644
