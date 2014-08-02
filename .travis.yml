@@ -4,9 +4,11 @@ language: python
 python: "2.7"
 before_install:
  - sudo apt-get update -qq
- - sudo apt-get install -qq python-apt python-pycurl aptitude
+ - sudo apt-get install -qq python-apt python-pycurl
 install:
   - pip install ansible
+  - ansible-galaxy install franklin.git
+  - ansible-galaxy install franklin.users
 script:
   - echo localhost > inventory
   - ansible-playbook --syntax-check -i inventory test.yml
