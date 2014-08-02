@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  roles:
+    - franklinkim.users-oh-my-zsh
+  vars:
+    users:
+      - name: Foo Bar
+        username: foobar
+        authorized_keys: []
+    users_oh_my_zsh_theme: robbyrussell
