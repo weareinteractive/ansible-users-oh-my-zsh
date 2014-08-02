@@ -36,6 +36,24 @@ $ git clone https://github.com/weareinteractive/ansible-role-users-oh-my-zsh.git
 ## Variables
 
 ```
+# Extends the franklinkim.users variable with oh_my_zh
+#
+# users:
+#   - name: Foo Bar
+#     username: foobar
+#     authorized_keys: []
+#     oh_my_zsh:
+#       theme: robbyrussell
+#       plugins: git
+#       case_sensitive: false
+#       disable_auto_update: true
+#       update_days: 13
+#       disable_ls_colors: false
+#       disable_auto_title: false
+#       disable_correction: true
+#       completion_waiting_dots: false
+#
+
 # default theme
 users_oh_my_zsh_theme: robbyrussell
 # default plugins
@@ -67,7 +85,8 @@ users_oh_my_zsh_completion_waiting_dots: false
       - name: Foo Bar
         username: foobar
         authorized_keys: []
-    users_oh_my_zsh_theme: robbyrussell
+        oh_my_zsh:
+          theme: supertheme
 ```
 
 ## Testing

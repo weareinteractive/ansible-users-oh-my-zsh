@@ -8,4 +8,5 @@
       - name: Foo Bar
         username: foobar
         authorized_keys: []
-    users_oh_my_zsh_theme: robbyrussell
+        oh_my_zsh:
+          theme: supertheme
