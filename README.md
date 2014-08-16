@@ -1,7 +1,7 @@
 # Ansible Users oh-my-zsh Role
 
-[![Build Status](https://travis-ci.org/weareinteractive/ansible-role-users-oh-my-zsh.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-role-users-oh-my-zsh)
-[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-role-users-oh-my-zsh.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-role-users-oh-my-zsh)
+[![Build Status](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
+[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-users-oh-my-zsh.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-users-oh-my-zsh)
 
 > `users-oh-my-zsh` is an [ansible](http://www.ansible.com) role which: 
 > 
@@ -25,13 +25,13 @@ $ arm install franklinkim.users-oh-my-zsh
 Using `git`:
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-users-oh-my-zsh.git
+$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
 ```
 
 ## Dependencies
 
-* [franklinkim.git](https://github.com/weareinteractive/ansible-role-git)
-* [franklinkim.users](https://github.com/weareinteractive/ansible-role-users)
+* [franklinkim.git](https://github.com/weareinteractive/ansible-git)
+* [franklinkim.users](https://github.com/weareinteractive/ansible-users)
 
 ## Variables
 
@@ -92,8 +92,8 @@ users_oh_my_zsh_completion_waiting_dots: false
 ## Testing
 
 ```
-$ git clone https://github.com/weareinteractive/ansible-role-users-oh-my-zsh.git
-$ cd ansible-role-users-oh-my-zsh
+$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
+$ cd ansible-users-oh-my-zsh
 $ vagrant up
 ```
 
