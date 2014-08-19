@@ -8,8 +8,8 @@
   with_items: users
   tags:
     - system
-    - oh-my-zsh
-    - users
+    - users-oh-my-zsh
+    - config
 
 - name: Setting permissions
   file: >
@@ -20,8 +20,8 @@
   with_items: users
   tags:
     - system
-    - oh-my-zsh
-    - users
+    - users-oh-my-zsh
+    - config
 
 - name: Settings default shell
   user: >
@@ -30,8 +30,8 @@
   with_items: users
   tags:
     - system
-    - oh-my-zsh
-    - users
+    - users-oh-my-zsh
+    - config
 
 - name: Configuring oh-my-zsh
   template: >
@@ -44,5 +44,5 @@
   with_items: users
   tags:
     - system
-    - oh-my-zsh
-    - users
+    - users-oh-my-zsh
+    - config

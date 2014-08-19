@@ -1,4 +1,4 @@
 ---
 
 - include: install.yml
-- include: users.yml
+- include: config.yml

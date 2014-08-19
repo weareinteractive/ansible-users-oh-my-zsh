@@ -3,10 +3,10 @@
 - name: Installing packages
   apt: >
     pkg={{ item }}
-    state=latest
+    state=present
   with_items:
     - zsh
   tags:
     - system
-    - oh-my-zsh
-    - users
+    - users-oh-my-zsh
+    - install
