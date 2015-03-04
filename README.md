@@ -82,6 +82,7 @@ users_oh_my_zsh_completion_waiting_dots: false
 ```
 - host: all
   roles: 
+    - franklinkim.git
     - franklinkim.users-oh-my-zsh
   vars:
     users:
