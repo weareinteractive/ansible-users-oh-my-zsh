@@ -30,7 +30,9 @@ $ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
 
 ## Dependencies
 
-* [franklinkim.users](https://github.com/weareinteractive/ansible-users)
+This role requires you to have `git` installled. You can use [franklinkim.git](https://github.com/weareinteractive/ansible-git) if you want.
+
+[franklinkim.users](https://github.com/weareinteractive/ansible-users) is not a dependency but this role was build on top of it.
 
 ## Variables
 
@@ -85,7 +87,6 @@ users_oh_my_zsh_completion_waiting_dots: false
     users:
       - name: Foo Bar
         username: foobar
-        authorized_keys: []
         oh_my_zsh:
           theme: supertheme
 ```

@@ -2,11 +2,11 @@
 
 - hosts: all
   roles:
+    - franklinkim.git
     - franklinkim.users-oh-my-zsh
   vars:
     users:
       - name: Foo Bar
         username: foobar
-        authorized_keys: []
         oh_my_zsh:
           theme: supertheme
