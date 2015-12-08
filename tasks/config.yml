@@ -11,7 +11,7 @@
   file:
     path: "/home/{{ item.username }}/.oh-my-zsh"
     owner: "{{ item.username }}"
-    group: "{{ item.group if item.group is defined else (users_group if users_group else item.username) }}"
+    group: "{{ item.group if item.group is defined else (users_group if users_group is defined else omit) }}"
     recurse: yes
   with_items: users
 
@@ -26,7 +26,7 @@
     src: home-user-zshrc.j2
     dest: "/home/{{ item.username }}/.zshrc"
     owner: "{{ item.username }}"
-    group: "{{ item.group if item.group is defined else (users_group if users_group else item.username) }}"
+    group: "{{ item.group if item.group is defined else (users_group if users_group is defined else omit) }}"
     backup: yes
-    mode: 0644
+    mode: "0644"
   with_items: users
