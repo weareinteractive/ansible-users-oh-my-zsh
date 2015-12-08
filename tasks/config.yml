@@ -1,48 +1,32 @@
 ---
 
-- name: Install oh-my-zsh
-  git: >
-    repo=https://github.com/robbyrussell/oh-my-zsh.git
-    dest=/home/{{ item.username }}/.oh-my-zsh
-    update=yes
+- name: Installing oh-my-zsh per user
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "/home/{{ item.username }}/.oh-my-zsh"
+    update: yes
   with_items: users
-  tags:
-    - system
-    - users-oh-my-zsh
-    - config
 
-- name: Setting permissions
-  file: >
-    path=/home/{{ item.username }}/.oh-my-zsh
-    owner={{ item.username }}
-    group={{ item.group if item.group is defined else (users_group if users_group else item.username) }}
-    recurse=yes
+- name: Setting permissions per user
+  file:
+    path: "/home/{{ item.username }}/.oh-my-zsh"
+    owner: "{{ item.username }}"
+    group: "{{ item.group if item.group is defined else (users_group if users_group else item.username) }}"
+    recurse: yes
   with_items: users
-  tags:
-    - system
-    - users-oh-my-zsh
-    - config
 
-- name: Settings default shell
-  user: >
-    name={{ item.username }}
-    shell=/bin/zsh
+- name: Setting default shell per user
+  user:
+    name: "{{ item.username }}"
+    shell: /bin/zsh
   with_items: users
-  tags:
-    - system
-    - users-oh-my-zsh
-    - config
 
 - name: Configuring oh-my-zsh
-  template: >
-    src=home-user-zshrc.j2
-    dest=/home/{{ item.username }}/.zshrc
-    owner={{ item.username }}
-    group={{ item.group if item.group is defined else (users_group if users_group else item.username) }}
-    backup=yes
-    mode=0644
+  template:
+    src: home-user-zshrc.j2
+    dest: "/home/{{ item.username }}/.zshrc"
+    owner: "{{ item.username }}"
+    group: "{{ item.group if item.group is defined else (users_group if users_group else item.username) }}"
+    backup: yes
+    mode: 0644
   with_items: users
-  tags:
-    - system
-    - users-oh-my-zsh
-    - config
