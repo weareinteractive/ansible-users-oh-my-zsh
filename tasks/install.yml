@@ -1,12 +1,8 @@
 ---
 
 - name: Installing packages
-  apt: >
-    pkg={{ item }}
-    state=present
+  apt:
+    pkg: "{{ item }}"
+    state: present
   with_items:
     - zsh
-  tags:
-    - system
-    - users-oh-my-zsh
-    - install

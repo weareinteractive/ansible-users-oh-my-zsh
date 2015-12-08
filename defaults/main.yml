@@ -1,7 +1,4 @@
 ---
-# For more information about default variables see:
-# http://www.ansibleworks.com/docs/playbooks_variables.html#id26
-#
 # Extends the franklinkim.users variable with oh_my_zh
 #
 # users:
@@ -11,11 +8,14 @@
 #     oh_my_zsh:
 #       theme: robbyrussell
 #       plugins: git
-#       case_sensitive: false
+#       case_sensitive: true
+#       hyphen_insensitive: true
+#       disable_update_prompt: true
 #       disable_auto_update: true
 #       update_days: 13
-#       disable_ls_colors: false
-#       disable_auto_title: false
+#       disable_ls_colors: true
+#       disable_auto_title: true
+#       disable_untracked_files_dirty: true
 #       disable_correction: true
 #       completion_waiting_dots: false
 #
@@ -24,17 +24,25 @@
 users_oh_my_zsh_theme: robbyrussell
 # default plugins
 users_oh_my_zsh_plugins: git
-# use case-sensitive completion
+# Use case-sensitive completion
 users_oh_my_zsh_case_sensitive: false
-# disable bi-weekly auto-update checks
+# Use hyphen-insensitive completion. Case sensitive
+# completion must be off. _ and - will be interchangeable.
+users_oh_my_zsh_hyphen_insensitive: false
+# Disable update prompt
+users_oh_my_zsh_disable_update_prompt: false
+# Disable bi-weekly auto-update checks
 users_oh_my_zsh_disable_auto_update: true
-# how often before auto-updates occur? (in days)
+# How often before auto-updates occur? (in days)
 users_oh_my_zsh_update_days: 13
-# if you want to disable colors in ls
+# If you want to disable colors in ls
 users_oh_my_zsh_disable_ls_colors: false
-# if you want to disable autosetting terminal title.
+# If you want to disable autosetting terminal title.
 users_oh_my_zsh_disable_auto_title: false
-# if you want to disable command autocorrection
+# If you want to disable marking untracked files under VCS as dirty.
+# This makes repository status check for large repositories much, much faster.
+users_oh_my_zsh_disable_untracked_files_dirty: false
+# If you want to disable command autocorrection
 users_oh_my_zsh_disable_correction: true
-# if you want red dots to be displayed while waiting for completion
+# If you want red dots to be displayed while waiting for completion
 users_oh_my_zsh_completion_waiting_dots: false
