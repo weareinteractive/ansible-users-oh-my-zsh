@@ -81,6 +81,7 @@ users_oh_my_zsh_completion_waiting_dots: false
 
 ```
 - host: all
+  sudo: yes
   roles: 
     - franklinkim.git
     - franklinkim.users-oh-my-zsh
