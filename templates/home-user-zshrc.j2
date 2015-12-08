@@ -16,49 +16,62 @@ ZSH_THEME="{{ oh_my_zsh.theme|default(users_oh_my_zsh_theme) }}"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
-CASE_SENSITIVE="{{ oh_my_zsh.case_sensitive|default(users_oh_my_zsh_case_sensitive) }}"
+CASE_SENSITIVE="{{ oh_my_zsh.case_sensitive|default(users_oh_my_zsh_case_sensitive)|to_nice_json }}"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="{{ oh_my_zsh.hyphen_insensitive|default(users_oh_my_zsh_hyphen_insensitive)|to_nice_json }}"
+
+# Uncomment this to disable update prompt
+DISABLE_UPDATE_PROMPT="{{ oh_my_zsh.disable_update_prompt|default(users_oh_my_zsh_disable_update_prompt)|to_nice_json  }}"
 
 # Uncomment this to disable bi-weekly auto-update checks
-DISABLE_AUTO_UPDATE="{{ oh_my_zsh.disable_auto_update|default(users_oh_my_zsh_disable_auto_update) }}"
+DISABLE_AUTO_UPDATE="{{ oh_my_zsh.disable_auto_update|default(users_oh_my_zsh_disable_auto_update)|to_nice_json  }}"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS={{ oh_my_zsh.update_days|default(users_oh_my_zsh_update_days) }}
 
 # Uncomment following line if you want to disable colors in ls
-DISABLE_LS_COLORS="{{ oh_my_zsh.disable_ls_colors|default(users_oh_my_zsh_disable_ls_colors) }}"
+DISABLE_LS_COLORS="{{ oh_my_zsh.disable_ls_colors|default(users_oh_my_zsh_disable_ls_colors)|to_nice_json  }}"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-DISABLE_AUTO_TITLE="{{ oh_my_zsh.disable_auto_title|default(users_oh_my_zsh_disable_auto_title) }}"
+DISABLE_AUTO_TITLE="{{ oh_my_zsh.disable_auto_title|default(users_oh_my_zsh_disable_auto_title)|to_nice_json  }}"
 
 # Uncomment following line if you want to disable command autocorrection
-DISABLE_CORRECTION="{{ oh_my_zsh.disable_correction|default(users_oh_my_zsh_disable_correction) }}"
+DISABLE_CORRECTION="{{ oh_my_zsh.disable_correction|default(users_oh_my_zsh_disable_correction)|to_nice_json  }}"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="{{ oh_my_zsh.completion_waiting_dots|default(users_oh_my_zsh_completion_waiting_dots) }}"
+COMPLETION_WAITING_DOTS="{{ oh_my_zsh.completion_waiting_dots|default(users_oh_my_zsh_completion_waiting_dots)|to_nice_json  }}"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="{{ oh_my_zsh.disable_untracked_files_dirty|default(users_oh_my_zsh_disable_untracked_files_dirty)|to_nice_json  }}"
 
 # Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=({{ oh_my_zsh.plugins|default(users_oh_my_zsh_plugins) }})
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -70,3 +83,12 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
