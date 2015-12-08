@@ -1,6 +1,7 @@
 ---
 
 - hosts: all
+  sudo: yes
   roles:
     - franklinkim.git
     - franklinkim.users-oh-my-zsh
