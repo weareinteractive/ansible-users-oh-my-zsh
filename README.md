@@ -1,10 +1,12 @@
-# Ansible Users oh-my-zsh Role
+# Ansible franklinkim.users-oh-my-zsh role
 
-[![Build Status](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh.png?branch=master)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
-[![Stories in Ready](https://badge.waffle.io/weareinteractive/ansible-users-oh-my-zsh.svg?label=ready&title=Ready)](http://waffle.io/weareinteractive/ansible-users-oh-my-zsh)
+[![Build Status](https://img.shields.io/travis/weareinteractive/ansible-users-oh-my-zsh.svg)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
+[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.sudo-blue.svg)](https://galaxy.ansible.com/list#/roles/1385)
+[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
+[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
 
-> `users-oh-my-zsh` is an [ansible](http://www.ansible.com) role which: 
-> 
+> `franklinkim.users-oh-my-zsh` is an [Ansible](http://www.ansible.com) role which:
+>
 > * installs zsh
 > * configures zsh for users
 
@@ -12,33 +14,33 @@
 
 Using `ansible-galaxy`:
 
-```
+```shell
 $ ansible-galaxy install franklinkim.users-oh-my-zsh
 ```
 
-Using `arm` ([Ansible Role Manager](https://github.com/mirskytech/ansible-role-manager/)):
+Using `requirements.yml`:
 
-```
-$ arm install franklinkim.users-oh-my-zsh
+```yaml
+- src: franklinkim.users-oh-my-zsh
 ```
 
 Using `git`:
 
-```
-$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
+```shell
+$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git franklinkim.users-oh-my-zsh
 ```
 
 ## Dependencies
 
-This role requires you to have `git` installled. You can use [franklinkim.git](https://github.com/weareinteractive/ansible-git) if you want.
-
-[franklinkim.users](https://github.com/weareinteractive/ansible-users) is not a dependency but this role was build on top of it.
+* Ansible >= 1.9
+* franklinkim.users
 
 ## Variables
 
 Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
 
-```
+```yaml
+---
 # Extends the franklinkim.users variable with oh_my_zh
 #
 # users:
@@ -48,11 +50,14 @@ Here is a list of all the default variables for this role, which are also availa
 #     oh_my_zsh:
 #       theme: robbyrussell
 #       plugins: git
-#       case_sensitive: false
+#       case_sensitive: true
+#       hyphen_insensitive: true
+#       disable_update_prompt: true
 #       disable_auto_update: true
 #       update_days: 13
-#       disable_ls_colors: false
-#       disable_auto_title: false
+#       disable_ls_colors: true
+#       disable_auto_title: true
+#       disable_untracked_files_dirty: true
 #       disable_correction: true
 #       completion_waiting_dots: false
 #
@@ -61,41 +66,57 @@ Here is a list of all the default variables for this role, which are also availa
 users_oh_my_zsh_theme: robbyrussell
 # default plugins
 users_oh_my_zsh_plugins: git
-# use case-sensitive completion
+# Use case-sensitive completion
 users_oh_my_zsh_case_sensitive: false
-# disable bi-weekly auto-update checks
+# Use hyphen-insensitive completion. Case sensitive
+# completion must be off. _ and - will be interchangeable.
+users_oh_my_zsh_hyphen_insensitive: false
+# Disable update prompt
+users_oh_my_zsh_disable_update_prompt: false
+# Disable bi-weekly auto-update checks
 users_oh_my_zsh_disable_auto_update: true
-# how often before auto-updates occur? (in days)
+# How often before auto-updates occur? (in days)
 users_oh_my_zsh_update_days: 13
-# if you want to disable colors in ls
+# If you want to disable colors in ls
 users_oh_my_zsh_disable_ls_colors: false
-# if you want to disable autosetting terminal title.
+# If you want to disable autosetting terminal title.
 users_oh_my_zsh_disable_auto_title: false
-# if you want to disable command autocorrection
+# If you want to disable marking untracked files under VCS as dirty.
+# This makes repository status check for large repositories much, much faster.
+users_oh_my_zsh_disable_untracked_files_dirty: false
+# If you want to disable command autocorrection
 users_oh_my_zsh_disable_correction: true
-# if you want red dots to be displayed while waiting for completion
+# If you want red dots to be displayed while waiting for completion
 users_oh_my_zsh_completion_waiting_dots: false
-```
-
-## Example playbook
 
 ```
-- host: all
+
+
+## Usage
+
+This is an example playbook:
+
+```yaml
+---
+
+- hosts: all
   sudo: yes
-  roles: 
+  roles:
     - franklinkim.git
     - franklinkim.users-oh-my-zsh
   vars:
     users:
       - name: Foo Bar
         username: foobar
+        authorized_keys: []
         oh_my_zsh:
           theme: supertheme
+
 ```
 
 ## Testing
 
-```
+```shell
 $ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
 $ cd ansible-users-oh-my-zsh
 $ vagrant up
@@ -109,6 +130,13 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+*Note: To update the `README.md` file please install and run `ansible-role`:*
+
+```shell
+$ gem install ansible-role
+$ ansible-role docgen
+```
 
 ## License
 Copyright (c) We Are Interactive under the MIT license.
