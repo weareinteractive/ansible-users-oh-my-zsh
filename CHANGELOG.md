@@ -1,3 +1,17 @@
+<a name="1.2.1"></a>
+### 1.2.1 (2016-01-02)
+
+
+#### Bug Fixes
+
+*   make sure git is installed ([3f8cd752](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/3f8cd752a8962ba35c8df1dfbcaed09732e1e590))
+
+#### Features
+
+*   add required 'authorized_keys' to user ([d8d0a677](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/d8d0a6775cd801d00e46df7b61a72236991da9f3))
+
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2015-12-08)
 
