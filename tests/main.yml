@@ -9,5 +9,6 @@
     users:
       - name: Foo Bar
         username: foobar
+        authorized_keys: []
         oh_my_zsh:
           theme: supertheme
