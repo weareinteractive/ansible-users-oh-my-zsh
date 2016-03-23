@@ -1,3 +1,13 @@
+<a name="1.2.2"></a>
+### 1.2.2 (2016-03-23)
+
+
+#### Bug Fixes
+
+*   fix deprication warning 'no bare variables' ([0471204a](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/0471204a976efccabe6b78aa769c4d235cd77a23))
+
+
+
 <a name="1.2.1"></a>
 ### 1.2.1 (2016-01-02)
 
