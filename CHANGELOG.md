@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+## 1.3.0 (2016-06-14)
+
+
+#### Features
+
+*   Dont redownload the git repo if its already there ([ccb61bb2](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/ccb61bb253a9f5ecd2dd92e1ef5bc6f6225d51a4))
+
+
+
 <a name="1.2.2"></a>
 ### 1.2.2 (2016-03-23)
 
