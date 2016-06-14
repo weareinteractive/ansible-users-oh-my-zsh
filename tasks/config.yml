@@ -4,7 +4,7 @@
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
     dest: "/home/{{ item.username }}/.oh-my-zsh"
-    update: yes
+    update: "{{ users_oh_my_zsh_update }}"
   with_items: "{{ users }}"
 
 - name: Setting permissions per user
