@@ -64,6 +64,8 @@ Here is a list of all the default variables for this role, which are also availa
 
 # default theme
 users_oh_my_zsh_theme: robbyrussell
+# update git repo on config run
+users_oh_my_zsh_update: no
 # default plugins
 users_oh_my_zsh_plugins: git
 # Use case-sensitive completion
@@ -114,16 +116,17 @@ This is an example playbook:
 
 ```
 
+
 ## Testing
 
 ```shell
 $ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git
 $ cd ansible-users-oh-my-zsh
-$ vagrant up
+$ make test
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
