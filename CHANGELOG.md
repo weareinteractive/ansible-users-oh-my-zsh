@@ -1,3 +1,13 @@
+<a name="1.4.0"></a>
+## 1.4.0 (2017-05-29)
+
+
+#### Features
+
+*   add support for centos ([ee6d1bc8](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/ee6d1bc8db761c36b5257698e965ca84d0f0387c))
+
+
+
 <a name="1.3.0"></a>
 ## 1.3.0 (2016-06-14)
 

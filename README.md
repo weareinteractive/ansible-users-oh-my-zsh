@@ -32,7 +32,7 @@ $ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git fran
 
 ## Dependencies
 
-* Ansible >= 1.9
+* Ansible >= 2.0
 * franklinkim.users
 
 ## Variables
