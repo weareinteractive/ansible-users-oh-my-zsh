@@ -1,24 +1,7 @@
 ---
 
-
 - name: Installing packages
-  apt:
-    pkg: "{{ item }}"
-    state: present
+  action: "{{ ansible_pkg_mgr }} pkg={{ item }} state=present"
   with_items:
     - zsh
     - git
-  when: ansible_os_family == 'Debian'
-
-
-
-- name: Installing packages
-  yum:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - zsh
-    - git
-  when: ansible_os_family == 'RedHat'
-  
-  
