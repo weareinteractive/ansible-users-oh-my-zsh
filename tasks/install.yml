@@ -1,9 +1,7 @@
 ---
 
 - name: Installing packages
-  apt:
-    pkg: "{{ item }}"
-    state: present
+  action: "{{ ansible_pkg_mgr }} pkg={{ item }} state=present"
   with_items:
     - zsh
     - git
