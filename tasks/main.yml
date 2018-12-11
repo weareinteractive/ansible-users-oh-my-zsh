@@ -1,13 +1,13 @@
 ---
 
-- include: install.yml
+- import_tasks: install.yml
   tags:
     - system
     - users-oh-my-zsh
     - install
     - install-users-oh-my-zsh
 
-- include: config.yml
+- import_tasks: config.yml
   tags:
     - system
     - users-oh-my-zsh
