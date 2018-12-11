@@ -1,3 +1,14 @@
+<a name="1.5.0"></a>
+## 1.5.0 (2018-12-11)
+
+
+#### Features
+
+*   update to ansible >2.4 ([771ba135](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/771ba135fd7ac547a359d08b52bdf98c8deb51c8))
+*   update galaxy role names ([c65bef07](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/c65bef07a994a94c6a33e19d50d99bf44077d151))
+
+
+
 <a name="1.4.0"></a>
 ## 1.4.0 (2017-05-29)
 
