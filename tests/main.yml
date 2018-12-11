@@ -1,10 +1,9 @@
 ---
 
 - hosts: all
-  sudo: yes
   roles:
-    - franklinkim.git
-    - franklinkim.users-oh-my-zsh
+    - weareinteractive.git
+    - weareinteractive.users-oh-my-zsh
   vars:
     users:
       - name: Foo Bar
