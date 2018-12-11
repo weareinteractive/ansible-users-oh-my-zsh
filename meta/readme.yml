@@ -1,13 +1,17 @@
 ---
 
-galaxy_name: franklinkim.users-oh-my-zsh
+galaxy_name: weareinteractive.users-oh-my-zsh
 github_user: weareinteractive
 github_name: ansible-users-oh-my-zsh
 badges: |
   [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-users-oh-my-zsh.svg)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
-  [![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.sudo-blue.svg)](https://galaxy.ansible.com/list#/roles/1385)
-  [![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
-  [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
+  [![Galaxy](http://img.shields.io/badge/galaxy-weareinteractive.users-oh-my-zsh-blue.svg)](https://galaxy.ansible.com/weareinteractive/users-oh-my-zsh)
+  [![GitHub tag](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh/releases)
+  [![GitHub stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg?style=social&label=Star)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
 description: |
   > * installs zsh
   > * configures zsh for users
+
+  **Note:**
+
+  > Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users-oh-my-zsh`!

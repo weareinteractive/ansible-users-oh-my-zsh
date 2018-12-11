@@ -1,39 +1,43 @@
-# Ansible franklinkim.users-oh-my-zsh role
+# Ansible weareinteractive.users-oh-my-zsh role
 
 [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-users-oh-my-zsh.svg)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
-[![Galaxy](http://img.shields.io/badge/galaxy-franklinkim.sudo-blue.svg)](https://galaxy.ansible.com/list#/roles/1385)
-[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
-[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
+[![Galaxy](http://img.shields.io/badge/galaxy-weareinteractive.users-oh-my-zsh-blue.svg)](https://galaxy.ansible.com/weareinteractive/users-oh-my-zsh)
+[![GitHub tag](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh/releases)
+[![GitHub stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg?style=social&label=Star)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
 
-> `franklinkim.users-oh-my-zsh` is an [Ansible](http://www.ansible.com) role which:
+> `weareinteractive.users-oh-my-zsh` is an [Ansible](http://www.ansible.com) role which:
 >
 > * installs zsh
 > * configures zsh for users
+
+**Note:**
+
+> Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users-oh-my-zsh`!
 
 ## Installation
 
 Using `ansible-galaxy`:
 
 ```shell
-$ ansible-galaxy install franklinkim.users-oh-my-zsh
+$ ansible-galaxy install weareinteractive.users-oh-my-zsh
 ```
 
 Using `requirements.yml`:
 
 ```yaml
-- src: franklinkim.users-oh-my-zsh
+- src: weareinteractive.users-oh-my-zsh
 ```
 
 Using `git`:
 
 ```shell
-$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git franklinkim.users-oh-my-zsh
+$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git weareinteractive.users-oh-my-zsh
 ```
 
 ## Dependencies
 
-* Ansible >= 2.0
-* franklinkim.users
+* Ansible >= 2.4
+* weareinteractive.users
 
 ## Variables
 
@@ -41,7 +45,7 @@ Here is a list of all the default variables for this role, which are also availa
 
 ```yaml
 ---
-# Extends the franklinkim.users variable with oh_my_zh
+# Extends the weareinteractive.users variable with oh_my_zh
 #
 # users:
 #   - name: Foo Bar
@@ -102,10 +106,9 @@ This is an example playbook:
 ---
 
 - hosts: all
-  sudo: yes
   roles:
-    - franklinkim.git
-    - franklinkim.users-oh-my-zsh
+    - weareinteractive.git
+    - weareinteractive.users-oh-my-zsh
   vars:
     users:
       - name: Foo Bar

@@ -1,5 +1,5 @@
 ---
-# Extends the franklinkim.users variable with oh_my_zh
+# Extends the weareinteractive.users variable with oh_my_zh
 #
 # users:
 #   - name: Foo Bar
