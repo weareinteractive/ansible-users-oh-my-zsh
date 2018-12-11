@@ -5,7 +5,7 @@ services:
   - docker
 env:
   global:
-    - role: weareinteractive.git
+    - role: weareinteractive.users-oh-my-zsh
   matrix:
     - distribution: Ubuntu
       distribution_version: "16.04"
