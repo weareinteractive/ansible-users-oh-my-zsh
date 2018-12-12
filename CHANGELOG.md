@@ -1,3 +1,13 @@
+<a name="1.5.1"></a>
+### 1.5.1 (2018-12-12)
+
+
+#### Features
+
+*   adopt galaxy role name rules ([9fc4d54d](https://github.com/weareinteractive/ansible-users-oh-my-zsh/commit/9fc4d54d3fd38d5b99e057ed8b4b53a96c710259))
+
+
+
 <a name="1.5.0"></a>
 ## 1.5.0 (2018-12-11)
 
