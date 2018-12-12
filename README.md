@@ -1,37 +1,37 @@
-# Ansible weareinteractive.users-oh-my-zsh role
+# Ansible weareinteractive.users_oh_my_zsh role
 
 [![Build Status](https://img.shields.io/travis/weareinteractive/ansible-users-oh-my-zsh.svg)](https://travis-ci.org/weareinteractive/ansible-users-oh-my-zsh)
 [![Galaxy](http://img.shields.io/badge/galaxy-weareinteractive.users-oh-my-zsh-blue.svg)](https://galaxy.ansible.com/weareinteractive/users-oh-my-zsh)
 [![GitHub tag](https://img.shields.io/github/tag/weareinteractive/ansible-users-oh-my-zsh.svg)](https://github.com/weareinteractive/ansible-users-oh-my-zsh/releases)
 [![GitHub stars](https://img.shields.io/github/stars/weareinteractive/ansible-users-oh-my-zsh.svg?style=social&label=Star)](https://github.com/weareinteractive/ansible-users-oh-my-zsh)
 
-> `weareinteractive.users-oh-my-zsh` is an [Ansible](http://www.ansible.com) role which:
+> `weareinteractive.users_oh_my_zsh` is an [Ansible](http://www.ansible.com) role which:
 >
 > * installs zsh
 > * configures zsh for users
 
 **Note:**
 
-> Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users-oh-my-zsh`!
+> Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users_oh_my_zsh`!
 
 ## Installation
 
 Using `ansible-galaxy`:
 
 ```shell
-$ ansible-galaxy install weareinteractive.users-oh-my-zsh
+$ ansible-galaxy install weareinteractive.users_oh_my_zsh
 ```
 
 Using `requirements.yml`:
 
 ```yaml
-- src: weareinteractive.users-oh-my-zsh
+- src: weareinteractive.users_oh_my_zsh
 ```
 
 Using `git`:
 
 ```shell
-$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git weareinteractive.users-oh-my-zsh
+$ git clone https://github.com/weareinteractive/ansible-users-oh-my-zsh.git weareinteractive.users_oh_my_zsh
 ```
 
 ## Dependencies
@@ -108,7 +108,7 @@ This is an example playbook:
 - hosts: all
   roles:
     - weareinteractive.git
-    - weareinteractive.users-oh-my-zsh
+    - weareinteractive.users_oh_my_zsh
   vars:
     users:
       - name: Foo Bar
