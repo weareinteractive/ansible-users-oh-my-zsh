@@ -1,6 +1,6 @@
 ---
 
-galaxy_name: weareinteractive.users-oh-my-zsh
+galaxy_name: weareinteractive.users_oh_my_zsh
 github_user: weareinteractive
 github_name: ansible-users-oh-my-zsh
 badges: |
@@ -14,4 +14,4 @@ description: |
 
   **Note:**
 
-  > Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users-oh-my-zsh`!
+  > Since Ansible Galaxy switched all role names to the organization name, this role has moved from `franklinkim.users-oh-my-zsh` to `weareinteractive.users_oh_my_zsh`!

@@ -3,7 +3,7 @@
 - hosts: all
   roles:
     - weareinteractive.git
-    - weareinteractive.users-oh-my-zsh
+    - weareinteractive.users_oh_my_zsh
   vars:
     users:
       - name: Foo Bar
